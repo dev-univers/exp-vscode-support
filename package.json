@@ -1,0 +1,55 @@
+{
+  "name": "exp-vscode-support",
+  "displayName": "Exp Support",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+      "vscode": "^1.63.0"
+  },
+  "categories": [
+      "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "exp",
+      "aliases": ["Exp", "exp"],
+      "extensions": [".exp"],
+      "configuration": "./language-configuration.json",
+      "embeddedLanguages": {
+        "source.exp": "javascript",
+        "source.js": "javascript"
+      }
+    }],
+    "grammars": [{
+      "language": "exp",
+      "scopeName": "source.exp",
+      "path": "./syntaxes/exp.tmLanguage.json"
+    }, {
+      "scopeName": "source.exp.js",
+      "path": "./syntaxes/JavaScript.exp.tmLanguage.json"
+    }, {
+      "scopeName": "source.exp.css",
+      "path": "./syntaxes/css.exp.tmLanguage.json"
+    }, {
+      "scopeName": "text.html.exp",
+      "path": "./syntaxes/html.exp.tmLanguage.json",
+      "embeddedLanguages": {
+        "text.html": "html",
+        "source.exp": "javascript",
+        "source.js": "javascript",
+        "source.css": "css"
+      }
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-univers/exp-vscode-support.git"
+  },
+  "keywords": ["Language-support", "syntaxe", "exp"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-univers/exp-vscode-support/issues"
+  },
+  "homepage": "https://github.com/dev-univers/exp-vscode-support#readme"
+}
